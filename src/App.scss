@@ -1,0 +1,173 @@
+$primary-color: #ffa200;
+$secondary-color: #6eda78;
+
+body {
+  margin: 0;
+  background: linear-gradient(110deg, $primary-color 60%, $secondary-color 60%);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.form-container {
+  border: 1px solid black;
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+
+  .form {
+     div {
+      padding: 10px;
+      .short {
+        width: 10%;
+      }
+
+      .medium {
+        width: 20%;
+
+      }
+
+      .long {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.container {
+  .grid-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: auto;
+    gap: 50px;
+    padding: 10px;
+
+    &.row2 {
+      display: flex;
+      flex-wrap: wrap;
+
+      .button {
+        width: 30%;
+      }
+    }
+
+    &.reverse {
+      flex-wrap: wrap-reverse;
+    }
+
+
+
+    .rectangle {
+      display: flex;
+    }
+
+    .button {
+      display: grid;
+      justify-content: center;
+      margin: auto;
+      height: 100%;
+      align-items: center;
+      width: 200px;
+      padding: 10px;
+      grid-template-rows: 80%, 20%;
+
+      .label {
+        position: absolute;
+        bottom: 0;
+        background-color: #6eda78;
+        color: white;
+      }
+
+      &.top-down {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-items: space-between;
+
+      }
+
+      &:hover {
+        background-color: $primary-color;
+      }
+
+      span {
+        display: flex;
+      }
+
+      .shape {
+        &.square {
+          width: 100px;
+          height: 100px;
+          background: red;
+        }
+
+        &.circle {
+          width: 100px;
+          height: 100px;
+          background: red;
+          border-radius: 50%
+        }
+
+        &.oval {
+          width: 200px;
+          height: 100px;
+          background: red;
+          border-radius: 100px / 50px;
+        }
+
+        &.trapezoid {
+          border-bottom: 100px solid red;
+          border-left: 25px solid transparent;
+          border-right: 25px solid transparent;
+          height: 0;
+          width: 100px;
+        }
+
+        &.parallelogram {
+          width: 150px;
+          height: 100px;
+          transform: skew(20deg);
+          background: red;
+        }
+
+        &.rectangle {
+          width: 200px;
+          height: 100px;
+          background: red;
+        }
+
+        &.triangle {
+          &.down {
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-top: 100px solid red;
+          }
+
+          &.left {
+            border-top: 50px solid transparent;
+            border-right: 100px solid red;
+            border-bottom: 50px solid transparent;
+          }
+
+          &.right {
+            border-top: 50px solid transparent;
+            border-left: 100px solid red;
+            border-bottom: 50px solid transparent;
+          }
+
+          &.up {
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid red;
+          }
+        }
+      }
+
+    }
+  }
+}
